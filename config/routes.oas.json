@@ -1,8 +1,361 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "version": "1.0.0",
-    "title": "My Zuplo API"
+    "title": "FastAPI",
+    "version": "0.1.0"
   },
-  "paths": {}
+  "paths": {
+    "/api/{endpoint}-health": {
+      "get": {
+        "summary": "Health Check",
+        "description": "Check the health of the specified endpoint.",
+        "operationId": "health_check_api__endpoint__health_get",
+        "parameters": [
+          {
+            "name": "endpoint",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Endpoint"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthCheck"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/skinshade": {
+      "post": {
+        "summary": "Skinshade",
+        "description": "Detect skin shade from an uploaded image.",
+        "operationId": "skinshade_api_skinshade_post",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_skinshade_api_skinshade_post"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SkinShadeResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/lips": {
+      "post": {
+        "summary": "Lips",
+        "description": "Apply lipstick color to lips in an uploaded image.",
+        "operationId": "lips_api_lips_post",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_lips_api_lips_post"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LipsResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hairswap": {
+      "post": {
+        "summary": "Hairswap",
+        "description": "Apply a new hairstyle to an uploaded image.",
+        "operationId": "hairswap_api_hairswap_post",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_hairswap_api_hairswap_post"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HairSwapResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Body_hairswap_api_hairswap_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "format": "binary",
+            "title": "File"
+          },
+          "hair": {
+            "type": "integer",
+            "title": "Hair"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file",
+          "hair"
+        ],
+        "title": "Body_hairswap_api_hairswap_post"
+      },
+      "Body_lips_api_lips_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "format": "binary",
+            "title": "File"
+          },
+          "color": {
+            "type": "string",
+            "title": "Color"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file",
+          "color"
+        ],
+        "title": "Body_lips_api_lips_post"
+      },
+      "Body_skinshade_api_skinshade_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "format": "binary",
+            "title": "File"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_skinshade_api_skinshade_post"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HairSwapResponse": {
+        "properties": {
+          "hairstyleImage": {
+            "type": "string",
+            "title": "Hairstyleimage"
+          }
+        },
+        "type": "object",
+        "required": [
+          "hairstyleImage"
+        ],
+        "title": "HairSwapResponse"
+      },
+      "HealthCheck": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "details": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Details"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "details"
+        ],
+        "title": "HealthCheck"
+      },
+      "LipsResponse": {
+        "properties": {
+          "lipsImage": {
+            "type": "string",
+            "title": "Lipsimage"
+          }
+        },
+        "type": "object",
+        "required": [
+          "lipsImage"
+        ],
+        "title": "LipsResponse"
+      },
+      "SkinShadeResponse": {
+        "properties": {
+          "skinShade": {
+            "type": "string",
+            "title": "Skinshade"
+          }
+        },
+        "type": "object",
+        "required": [
+          "skinShade"
+        ],
+        "title": "SkinShadeResponse"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
 }
