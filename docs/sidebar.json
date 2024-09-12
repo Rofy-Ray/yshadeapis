@@ -3,11 +3,21 @@
     {
       "type": "doc",
       "id": "index",
-      "label": "Index"
+      "label": "Welcome"
+    },
+    {
+      "type": "doc",
+      "id": "start",
+      "label": "Quick Start"
     },
     {
       "type": "api-ref",
       "label": "API Reference"
+    },
+    {
+      "type": "doc",
+      "id": "terms",
+      "label": "Terms of Use"
     }
   ]
 }
