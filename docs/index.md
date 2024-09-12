@@ -1,43 +1,38 @@
-# My API
+🤖 Welcome!
+===========
 
-You can write full markdown in these documents. Syntax highlighting and full
-Github Flavored markdown are supported. To learn more about customizing the
-documentation of this developer portal
-[see the documentation](https://zuplo.com/docs/developer-portal/adding-pages).
+We're an innovative AI solutions startup focused on building custom AI algorithms that excel in skin recognition, analysis & matching with inclusive data sets for over 100 skin shades and undertones.
 
-```ts
-const response = await fetch("https://echo.zuplo.io", {
-  headers: {
-    "content-type": "application/json",
-  },
-});
+Introduction to roboAPIs
+------------------------
 
-const data = await response.json();
-console.log(data);
-```
+Our APIs allow you to access the power of our AI-powered platform and incorporate its capabilities into your systems and processes. With our APIs, you can foster inclusivity and efficiency, enabling personalized experiences in your applications, processes, and systems.
 
-## Labore et Dolore
+We can empower your business or company to offer personalized product recommendations to your customers based on their unique skin shade and undertones.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.
+### Key Features
 
-| Item            | Description                                  | Quanity |
-| --------------- | -------------------------------------------- | ------- |
-| ullamco laboris | reprehenderit in voluptate velit esse cillum | 21      |
-| Excepteur sint  | tempor incididunt ut labore                  | 1       |
-| anim id est     | irure dolor in reprehenderit in voluptate    | 82      |
-| non proiden     | cupidatat non proident, sunt in              | 53      |
+-   Easy to use and integrate
+-   Detailed documentation
+-   Code samples provided
+-   Support for developers and business owners
 
-## Aliquip pariatur
+In this documentation, you will find:
 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-deserunt mollit anim id est laborum.
+-   Detailed information on each of our APIs
+-   Descriptions of functionality, parameters, and responses
+-   Examples of API usage
+-   Tips and troubleshooting guide
 
-- **Item 1** - ullamco laboris nisi ut aliquip ex ea commodo
-- **Item 2** - ullamco laboris nisi ut aliquip ex ea commodo
-- **Item 3** - ullamco laboris nisi ut aliquip ex ea commodo
-- **Item 4** - ullamco laboris nisi ut aliquip ex ea commodo
+If you have any questions or need help integrating our APIs, don't hesitate to contact our developer support team. We are here to help you succeed and bring the benefits of personalized product recommendations to your customers.
+
+Quick Links
+-----------
+
+Want to jump right in? Feeling like an eager beaver? Jump into the quick start docs and get making your first request:
+
+[🏁 Quick Start](start)
+
+Want to deep dive? Dive a little deeper and start exploring our API reference to get an idea of everything possible with the API:
+
+[📖 API Reference](./\#overview)
