@@ -1,5 +1,22 @@
 {
   "$schema": "https://cdn.zuplo.com/schemas/dev-portal.json",
   "enabled": true,
-  "enableAuthentication": true
+  "enableAuthentication": true,
+  "generateExamples": true,
+  "requireAuthentication": false,
+  "pageTitle": "yShade Dev Portal",
+  "faviconUrl": "https://i.postimg.cc/QMXMFGMS/favicon-16x16.png",
+  "authentication": {
+    "provider": "auth0",
+    "issuer": "dev-ztiyse4rvktonouo.us.auth0.com/",
+    "clientId": "xTGufQgWF9dKZ3L4oSZpA7NiCRXOdcxl",
+    "audience": "https://api.robomua.com/"
+  },
+  "enableMonetization": true,
+  "monetization": {
+    "provider": "stripe",
+    "secretKey": "$env(STRIPE_SECRET_KEY)",
+    "pricingTableId": "prctbl_1Pz4lrKF2la6LHWCJJHVqJLu",
+    "publishableKey": "pk_live_51OYgi6KF2la6LHWC2Q4YU04exZWIZDYz5zav2l7HRoVCGw7jXSMgAZgpLRyJmiALWM6ISmYT6kNYKfM3p4DAZVEr00wI4nd7Ua"
+  }
 }

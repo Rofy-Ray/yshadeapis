@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "yShade.AI APIs",
+    "title": "yShade APIs",
     "version": "0.1.0"
   },
   "paths": {
@@ -92,6 +92,22 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://getting-started.zuplo.io"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound",
+              "monetization-inbound"
+            ]
+          }
         }
       }
     },
@@ -142,6 +158,22 @@
               }
             }
           }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://getting-started.zuplo.io"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound-1",
+              "monetization-inbound-1"
+            ]
+          }
         }
       }
     },
@@ -191,6 +223,22 @@
                 }
               }
             }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "urlForwardHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "baseUrl": "https://getting-started.zuplo.io"
+            }
+          },
+          "policies": {
+            "inbound": [
+              "api-key-inbound-2",
+              "monetization-inbound-2"
+            ]
           }
         }
       }
