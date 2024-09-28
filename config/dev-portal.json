@@ -16,7 +16,7 @@
   "monetization": {
     "provider": "stripe",
     "secretKey": "$env(STRIPE_SECRET_KEY)",
-    "pricingTableId": "prctbl_1Pz4lrKF2la6LHWCJJHVqJLu",
-    "publishableKey": "pk_live_51OYgi6KF2la6LHWC2Q4YU04exZWIZDYz5zav2l7HRoVCGw7jXSMgAZgpLRyJmiALWM6ISmYT6kNYKfM3p4DAZVEr00wI4nd7Ua"
+    "pricingTableId": "prctbl_1Q48smKF2la6LHWC8GqNzb13",
+    "publishableKey": "pk_test_51OYgi6KF2la6LHWCHH81WC5j6HceCWwxKGoR1I6YjOTMKOLCZGH6Z8zSumzc8LoVInnk6Sjgc404yK6P5l715wfP00KYyb4eQ2"
   }
 }
