@@ -8,7 +8,7 @@
   "faviconUrl": "https://i.postimg.cc/QMXMFGMS/favicon-16x16.png",
   "authentication": {
     "provider": "auth0",
-    "issuer": "dev-ztiyse4rvktonouo.us.auth0.com/",
+    "issuer": "https://dev-ztiyse4rvktonouo.us.auth0.com/",
     "clientId": "xTGufQgWF9dKZ3L4oSZpA7NiCRXOdcxl",
     "audience": "https://api.robomua.com/"
   },
